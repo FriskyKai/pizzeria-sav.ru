@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('phone', 16)->unique();
             $table->string('password');
             $table->foreignId('role_id')->default(2)->constrained()->onUpdate('cascade');
+            $table->foreignId('address_id')->nullable()->constrained()->onUpdate('cascade');
             $table->rememberToken()->unique();
             $table->timestamps();
         });

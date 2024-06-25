@@ -16,6 +16,7 @@ return new class extends Migration
             $table->boolean('new');
             $table->boolean('bestseller');
             $table->foreignId('category_id')->constrained()->onUpdate('cascade');
+            $table->foreignId('photo_id')->nullable()->constrained()->onUpdate('cascade');
             $table->timestamps();
         });
     }
